@@ -1,383 +1,208 @@
+Here is a complete HTML + CSS document for the skyrim-hack-2026-dragonborn-build-toolkit README page. It includes SEO meta tags, a responsive card layout with rounded corners and a soft shadow, plus two clearly placed download buttons to guide Windows users to the GitHub page.
+```html
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio cá nhân của Nguyễn Tấn Đức. Kỹ năng, dự án phần mềm, nghiên cứu và hành trình học tập." />
-  <meta name="theme-color" content="#fbfbfd" />
-  <title>Nguyễn Tấn Đức | Hồ sơ cá nhân</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --navy: #192945;
-      --ink: #1a2c49;
-      --muted: #687590;
-      --purple: #6751b9;
-      --lavender: #f0edfc;
-      --bg: #fbfbfd;
-      --alt: #f4f5f9;
-      --line: #e0e5ef;
-      --white: #ffffff;
-      --content: 1168px;
-      --shadow: 0 14px 42px rgba(33,45,80,.055);
-    }
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
-    body { margin: 0; color: var(--ink); background: var(--bg); font-family: Inter, system-ui, -apple-system, 'Segoe UI', Arial, sans-serif; font-size: 14px; line-height: 1.7; }
-    a { color: inherit; text-decoration: none; }
-    button, a { -webkit-tap-highlight-color: transparent; }
-    a:focus-visible, button:focus-visible { outline: 3px solid var(--purple); outline-offset: 3px; }
-    .container { width: min(var(--content), calc(100% - 44px)); margin-inline: auto; }
-    .site-header { background: rgba(251,251,253,.94); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 30; backdrop-filter: blur(12px); }
-    .header-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { display: inline-flex; gap: 10px; align-items: center; font-size: 13px; font-weight: 700; white-space: nowrap; }
-    .brand svg { color: var(--purple); }
-    .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: clamp(12px, 1.7vw, 28px); }
-    .nav-links a { color: #68748c; font-size: 12px; font-weight: 500; transition: color .2s; }
-    .nav-links a:hover { color: var(--purple); }
-    .hero { background: var(--bg); padding: 76px 0 72px; }
-    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(300px, .95fr); align-items: center; gap: clamp(45px, 7vw, 110px); }
-    .eyebrow { color: var(--purple); font-size: 12px; font-weight: 800; letter-spacing: .115em; text-transform: uppercase; }
-    .hero-badge { background: var(--lavender); border-radius: 8px; display: inline-flex; padding: 7px 13px; font-size: 11px; line-height: 1.2; }
-    .intro-small { color: var(--navy); font-weight: 700; font-size: 19px; margin: 24px 0 7px; }
-    h1,h2,h3,p { margin-top: 0; }
-    h1 { font-size: clamp(38px, 4.2vw, 57px); line-height: 1.16; letter-spacing: -.052em; font-weight: 800; color: var(--navy); margin: 0 0 12px; }
-    .hero-role { font-size: clamp(16px, 1.3vw, 20px); font-weight: 650; color: var(--navy); margin: 0 0 8px; }
-    .hero-focus { color: var(--purple); font-weight: 600; font-size: 14px; margin-bottom: 17px; }
-    .hero-description { color: var(--muted); max-width: 515px; font-size: 15px; margin-bottom: 22px; line-height: 1.8; }
-    .button-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-    .btn { display: inline-flex; gap: 8px; align-items: center; justify-content: center; border-radius: 9px; padding: 12px 18px; min-height: 45px; border: 1px solid var(--line); font-weight: 700; font-size: 13px; transition: transform .18s, background .18s, border-color .18s; }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary { background: var(--navy); color: var(--white); border-color: var(--navy); }
-    .btn-primary:hover { background: #304a72; }
-    .btn-light { background: var(--white); }
-    .btn-light:hover { border-color: var(--purple); }
-    .note { margin: 19px 0 0; color: #8994a8; font-size: 11px; }
-    .hero-art { aspect-ratio: 1.06 / 1; width: 100%; max-width: 453px; justify-self: end; background: #efeafa; border-radius: 30px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-    .hero-art svg { width: 96%; height: 96%; }
-    .section { padding: 84px 0 88px; }
-    .section-alt { background: var(--alt); }
-    .section-white { background: var(--bg); }
-    .section-label { font-size: 11px; color: var(--purple); font-weight: 800; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 9px; }
-    h2 { font-size: clamp(27px, 2.65vw, 37px); letter-spacing: -.038em; line-height: 1.24; font-weight: 800; margin-bottom: 14px; color: var(--navy); }
-    h3 { font-size: 17px; font-weight: 750; line-height: 1.5; color: var(--navy); }
-    .section-description { color: var(--muted); font-size: 14px; max-width: 850px; line-height: 1.85; }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; margin-top: 28px; }
-    .about-grid .about-heading { font-size: clamp(19px, 2vw, 25px); margin: 0 0 13px; }
-    .about-grid p { color: var(--muted); font-size: 14px; max-width: 525px; }
-    .about-point + .about-point { margin-top: 24px; }
-    .about-point h3 { margin: 0 0 6px; }
-    .skills-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 18px; margin-top: 34px; }
-    .skill-card { display:flex; align-items:center; gap: 17px; border:1px solid var(--line); background: white; border-radius: 13px; padding: 19px 18px; min-height: 86px; transition: transform .18s,border-color .18s; }
-    .skill-card:hover { transform: translateY(-2px); border-color:#a9a0d7; }
-    .skill-icon { flex:none; width: 40px; height: 40px; display: grid; place-items:center; background:#f3f4fa; border-radius: 10px; color: var(--navy); font-weight:800; font-size:18px; }
-    .skill-icon svg { width: 23px; height: 23px; }
-    .skill-card h3 { font-size: 13px; margin: 0 0 2px; }
-    .skill-card p { font-size: 11px; color: var(--muted); line-height: 1.3; margin: 0; }
-    .projects-grid { display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; margin-top: 34px; }
-    .project-card { background: white; border:1px solid var(--line); border-radius: 15px; padding: 12px; display:flex; flex-direction:column; min-width:0; box-shadow: 0 7px 24px rgba(24,37,68,.018); transition: transform .2s,box-shadow .2s; }
-    .project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .project-art { height: 211px; border-radius: 9px; overflow:hidden; background:#ece8fa; }
-    .project-art.dark { background:#1c2c4c; }
-    .project-art svg { width: 100%;height:100%;display:block; }
-    .project-body { padding: 15px 11px 13px; flex:1; display:flex;flex-direction:column; }
-    .project-type { text-transform:uppercase; letter-spacing:.12em; font-size:10px; font-weight:800; color:var(--purple); margin-bottom: 11px; }
-    .project-card h3 { font-size:17px; line-height:1.52; margin:0 0 10px; }
-    .project-card p { font-size: 13px; color:var(--muted); line-height:1.78; margin-bottom:11px; }
-    .project-tech { font-size: 11px!important; color:#61708a!important; }
-    .project-link { margin-top:auto; border-top:1px solid var(--line); padding-top:15px; color:#63728c; font-size:12px; display:flex; align-items:center; gap:8px; }
-    a.project-link:hover { color: var(--purple); }
-    .timeline-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap:23px; margin-top: 32px; }
-    .timeline-card { background: #fff; border:1px solid var(--line); border-radius: 14px; padding: 27px 29px 24px; }
-    .mini-label { color:var(--purple); font-size: 11px; text-transform:uppercase; font-weight:800; letter-spacing:.10em; display:flex;align-items:center;gap:8px; }
-    .timeline-card h3 { margin:14px 0 10px; }
-    .timeline-card p { font-size:13px;color:var(--muted); margin-bottom:9px; }
-    .timeline-card p:last-child{margin-bottom:0}
-    .cv-banner { margin-top: 74px; background:var(--navy); color:white; padding:43px 46px; border-radius:20px; display:flex;justify-content:space-between;align-items:center;gap:25px; }
-    .cv-banner .section-label { color: #d9d7ff; }
-    .cv-banner h2 { color:white; margin: 2px 0 9px; }
-    .cv-banner p { color: #e0e5f0; font-size:13px; margin:0; }
-    .cv-aside { min-width: 200px; text-align:center; }
-    .cv-aside .btn { color:var(--navy);background:#ece7fe;border-color:#ece7fe; }
-    .cv-aside .note { color:#d5daeb; margin-top:8px; }
-    .contact-grid { display:grid;grid-template-columns:1fr 1fr;gap:70px; align-items:center; margin-top:27px; }
-    .contact-headline { font-size:19px; margin-bottom:12px; }
-    .contact-left p { max-width:500px; color:var(--muted);margin-bottom:12px;font-size:14px; }
-    .contact-left .small { color:#8792a4; font-size:11px; }
-    .contact-links { display:grid; gap:14px; }
-    .contact-link { display:flex;gap:16px;align-items:center; background:#fff;border:1px solid var(--line);padding:19px 20px;border-radius:12px; transition:border-color .2s,transform .2s; }
-    a.contact-link:hover { border-color:var(--purple);transform:translateY(-2px); }
-    .contact-link-icon {color:var(--purple);width:26px;height:26px;flex:none}
-    .contact-link strong { display:block;font-size:13px; }
-    .contact-link span { color:var(--muted);font-size:12px; }
-    footer { border-top:1px solid var(--line); background:#fff; }
-    .footer-row {display:flex;align-items:center;justify-content:space-between;gap:20px;padding:28px 0;font-size:11px;color:#778399}
-    .footer-row b { color:var(--ink); }
-    @media(max-width:960px) {
-      .hero-grid {gap:30px;grid-template-columns:minmax(0,1.1fr) minmax(245px,.9fr)}
-      .hero-art{border-radius:22px}
-      .skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .projects-grid{gap:14px}
-      .project-art{height:185px}
-      .project-card h3{font-size:15px}
-      .about-grid{gap:34px}
-    }
-    @media(max-width:650px) {
-      html{scroll-padding-top:130px}
-      .header-inner{align-items:flex-start; flex-direction:column;justify-content:center;gap:12px;padding:16px 0;min-height:0}
-      .nav-links{gap:12px;overflow-x:auto;max-width:100%;width:100%;justify-content:flex-start;white-space:nowrap;padding-bottom:2px}
-      .nav-links a{font-size:11px}
-      .hero{padding:47px 0 60px}
-      .hero-grid{grid-template-columns:1fr;gap:35px}
-      .hero-art{justify-self:center;max-width:410px;aspect-ratio:1.2}
-      h1{font-size:clamp(35px,9vw,52px)}
-      .section{padding:60px 0}
-      .about-grid,.contact-grid{grid-template-columns:1fr;gap:24px}
-      .skills-grid{gap:11px}
-      .skill-card{padding:13px 11px;gap:10px;min-height:70px}
-      .skill-icon{width:36px;height:36px;font-size:16px}
-      .projects-grid{grid-template-columns:1fr;gap:18px}
-      .project-art{height:210px}
-      .project-card h3{font-size:17px}
-      .timeline-grid{grid-template-columns:1fr;gap:14px}
-      .cv-banner{margin-top:48px;padding:30px 23px;align-items:flex-start;flex-direction:column}
-      .cv-aside{text-align:left}
-      .footer-row{flex-direction:column;align-items:flex-start;gap:5px}
-    }
-    @media(prefers-reduced-motion:reduce) {html{scroll-behavior:auto}.btn,.project-card,.skill-card,.contact-link{transition:none}}
-
-    /* 2026-11-04: đồng bộ bố cục Portfolio theo thiết kế Framer cập nhật. */
-    :root { --content: 1168px; }
-    .header-inner { gap: 28px; }
-    .nav-links { gap: clamp(16px, 2.1vw, 29px); }
-    .nav-links a { font-size: 12px; white-space: nowrap; }
-    .hero { padding: 55px 0 53px; }
-    .hero-grid { grid-template-columns: minmax(0,1.28fr) minmax(270px,.72fr); gap: clamp(32px,5vw,84px); }
-    .hero-art { max-width: 370px; border-radius: 26px; }
-    .intro-small { margin: 18px 0 4px; }
-    .hero-description { margin-bottom: 18px; }
-    .note { margin-top: 12px; }
-    #projects { padding-top: 75px; padding-bottom: 78px; }
-    .projects-grid { grid-template-columns: 1fr; gap: 22px; margin-top: 33px; }
-    .project-card {
-      display: grid; grid-template-columns: minmax(0, 42%) minmax(0, 58%);
-      align-items: stretch; padding: 13px; width: 100%; min-height: 294px;
-      border-radius: 20px; overflow: hidden; transition: transform .2s, box-shadow .2s;
-    }
-    .project-art { height: auto; min-height: 275px; border-radius: 13px; display: grid; place-items: center; }
-    .project-art svg { width: 100%; height: 100%; }
-    .project-body { min-width: 0; padding: 30px clamp(22px,3.4vw,47px) 24px; }
-    .project-type { font-size: 11px; margin-bottom: 13px; }
-    .project-card h3 { font-size: clamp(20px,2.1vw,27px); line-height: 1.36; letter-spacing: -.025em; margin-bottom: 12px; }
-    .project-card p { font-size: 14px; line-height: 1.75; margin-bottom: 12px; }
-    .project-tech { font-size: 12px!important; }
-    .project-link { font-size: 12px; padding-top: 16px; }
-    #about { padding-top: 72px; padding-bottom: 71px; }
-    #about .about-grid { margin-top: 20px; }
-    #skills { padding-top: 82px; padding-bottom: 90px; }
-    #journey { padding-top: 79px; }
-    #contact { padding-top: 88px; }
-    @media (max-width: 1024px) and (min-width: 701px) {
-      .container { width: min(var(--content), calc(100% - 54px)); }
-      .header-inner { min-height: 77px; gap: 16px; }
-      .nav-links { gap: clamp(10px,1.6vw,20px); }
-      .nav-links a { font-size: 11px; }
-      .hero { padding: 53px 0 54px; }
-      .hero-grid { grid-template-columns: minmax(0,1.16fr) minmax(230px,.84fr); gap: 25px; }
-      .hero-art { max-width: 340px; }
-      .projects-grid { gap: 18px; }
-      .project-card { grid-template-columns: 43% 57%; min-height: 250px; }
-      .project-art { height: auto; min-height: 234px; }
-      .project-body { padding: 18px 22px 16px; }
-      .project-card h3 { font-size: 19px; line-height: 1.35; }
-      .project-card p { font-size: 13px; line-height: 1.65; }
-      .project-type { font-size: 10px; margin-bottom: 9px; }
-      .project-link { padding-top: 10px; }
-    }
-    @media (max-width: 700px) {
-      html { scroll-padding-top: 140px; }
-      .container { width: calc(100% - 36px); }
-      .header-inner { padding: 14px 0 11px; gap: 12px; flex-direction: column; align-items: stretch; min-height: 0; }
-      .brand { justify-content: center; }
-      .nav-links {
-        display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 5px 8px;
-        width: 100%; max-width: 100%; padding: 0;
-        overflow: visible; white-space: normal; text-align: center;
-      }
-      .nav-links a { display: block; font-size: 11px; padding: 6px 3px; border-radius: 7px; }
-      .nav-links a:hover { background: #eceafa; }
-      .hero { padding: 40px 0 49px; }
-      .hero-grid { grid-template-columns: 1fr; gap: 27px; }
-      .hero-text { max-width: 580px; }
-      .hero-art { width: min(100%,390px); aspect-ratio: 1.2; justify-self: center; }
-      #projects { padding-top: 59px; padding-bottom: 65px; }
-      .projects-grid { grid-template-columns: 1fr; gap: 17px; margin-top: 24px; }
-      .project-card { display: flex; flex-direction: column; min-height: 0; padding: 10px; border-radius: 16px; }
-      .project-art { min-height: 0; height: auto; aspect-ratio: 1.8; border-radius: 10px; }
-      .project-body { padding: 20px 14px 16px; }
-      .project-card h3 { font-size: 19px; }
-      .project-card p { font-size: 13px; }
-      .project-type { font-size: 10px; }
-      .project-link { margin-top: 5px; }
-      #about { padding-top: 60px; padding-bottom: 60px; }
-      #skills, #journey, #contact { padding-top: 65px; padding-bottom: 66px; }
-      .section { padding: 65px 0; }
-      .about-grid { gap: 22px; }
-      .skills-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
-    }
-    @media (max-width: 380px) {
-      .container { width: calc(100% - 30px); }
-      .nav-links { gap: 2px 3px; }
-      .nav-links a { font-size: 10px; padding-inline: 0; }
-      .project-body { padding-inline: 9px; }
-      .skill-card { padding: 10px 8px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>skyrim-hack-2026-dragonborn-build-toolkit - Plan Your Perfect Dragonborn Legend</title>
+<meta name="description" content="Skyrim Hack 2026 themed PC companion for Dragonborn builds, skills, equipment, crafting, quests, exploration and progression analytics. Download the toolkit for Windows and start planning your build today.">
+<meta name="keywords" content="skyrim, skyrim-modding, skyrim hack 2026, dragonborn build, skyrim build planner, skyrim skills, skyrim equipment, skyrim crafting, skyrim quests, progression analytics, pc companion, windows app">
+<meta name="author" content="skyrim-hack-2026-dragonborn-build-toolkit">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://github.com/Methat210747/skyrim-hack-2026-dragonborn-build-toolkit">
+<meta property="og:type" content="website">
+<meta property="og:title" content="skyrim-hack-2026-dragonborn-build-toolkit - Plan Your Perfect Dragonborn Legend">
+<meta property="og:description" content="A Skyrim Hack 2026 themed PC companion for Dragonborn builds, skills, equipment, crafting, quests, exploration and progression analytics.">
+<meta property="og:url" content="https://github.com/Methat210747/skyrim-hack-2026-dragonborn-build-toolkit">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="skyrim-hack-2026-dragonborn-build-toolkit - Plan Your Perfect Dragonborn Legend">
+<meta name="twitter:description" content="A Skyrim Hack 2026 themed PC companion for Dragonborn builds, skills, equipment, crafting, quests, exploration and progression analytics.">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #eef1f7;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #24303f;
+    line-height: 1.75;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; height: auto; }
+  @media (max-width: 640px) {
+    .page-wrap { padding: 14px !important; }
+    .card { padding: 22px !important; }
+    h1 { font-size: 26px !important; }
+    h2 { font-size: 20px !important; }
+    .cta { display: block !important; width: 100% !important; text-align: center !important; }
+  }
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Trở về đầu trang">
-        <svg width="23" height="23" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4H6v5c0 2-1 3-3 3 2 0 3 1 3 3v5h3M15 4h3v5c0 2 1 3 3 3-2 0-3 1-3 3v5h-3"/><path d="m13 6-2 12"/></svg>
-        Hồ sơ cá nhân
+
+<div class="page-wrap" style="max-width: 900px; margin: 0 auto; padding: 32px 20px 60px 20px;">
+
+  <div class="card" style="background: #ffffff; border-radius: 18px; box-shadow: 0 10px 30px rgba(24, 39, 75, 0.10); padding: 42px 40px; border: 1px solid #e3e8f1;">
+
+    <h1 style="font-size: 34px; line-height: 1.25; margin: 0 0 16px 0; color: #16233a; font-weight: 800; letter-spacing: -0.4px;">
+      🐉 skyrim-hack-2026-dragonborn-build-toolkit - Plan Your Perfect Dragonborn Legend
+    </h1>
+
+    <p style="margin: 0 0 26px 0; color: #4a5768; font-size: 18px;">
+      A friendly Windows companion app for Skyrim Hack 2026 players who want to plan builds, track skills, manage equipment, organize crafting, follow quests, log exploration and review progression analytics — all in one tidy place.
+    </p>
+
+    <div style="text-align: center; margin: 0 0 34px 0;">
+      <a class="cta" href="https://github.com/Methat210747/skyrim-hack-2026-dragonborn-build-toolkit" style="display: inline-block; padding: 18px 42px; font-size: 18px; font-weight: 700; color: #ffffff; text-decoration: none; border-radius: 12px; background: linear-gradient(135deg, #7b2ff7 0%, #f107a3 100%); box-shadow: 0 8px 20px rgba(123, 47, 247, 0.35); letter-spacing: 0.2px;">
+        ⬇️ Visit This Link To Download The Application
       </a>
-      <nav class="nav-links" aria-label="Điều hướng">
-        <a href="#projects">Dự án</a><a href="#about">Về tôi</a><a href="#skills">Kỹ năng</a><a href="#journey">Hành trình</a><a href="#cv">CV</a><a href="#contact">Liên hệ</a>
-      </nav>
     </div>
-  </header>
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <span class="eyebrow hero-badge">Hồ sơ cá nhân</span>
-          <p class="intro-small">Xin chào, tôi là</p>
-          <h1 id="hero-title">Nguyễn Tấn Đức</h1>
-          <p class="hero-role">Sinh viên Công nghệ thông tin</p>
-          <p class="hero-focus">Định hướng Kỹ thuật phần mềm</p>
-          <p class="hero-description">Tôi quan tâm đến phát triển phần mềm, nghiên cứu công nghệ và xây dựng những ứng dụng giải quyết các vấn đề thực tế. Đây là nơi tôi giới thiệu hành trình học tập và những dự án của mình.</p>
-          <div class="button-row">
-            <a class="btn btn-primary" href="#projects">Xem dự án <span aria-hidden="true">↗</span></a>
-            <a class="btn btn-light" href="#contact">Liên hệ</a>
-          </div>
-          <p class="note">Portfolio cá nhân · ntduc.id.vn</p>
-        </div>
-        <div class="hero-art" role="img" aria-label="Minh họa hai hình khối liên kết màu xanh và tím">
-          <svg viewBox="0 0 460 440" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs>
-              <radialGradient id="surface" cx="50%" cy="42%" r="78%"><stop stop-color="#f7f4ff"/><stop offset="1" stop-color="#eae5f8"/></radialGradient>
-              <linearGradient id="linkBlue" x1=".1" y1=".1" x2=".95" y2=".9" objectBoundingBox="true"><stop offset="0" stop-color="#6678b9"/><stop offset=".28" stop-color="#273765"/><stop offset=".60" stop-color="#152147"/><stop offset=".86" stop-color="#42538d"/><stop offset="1" stop-color="#7884b9"/></linearGradient>
-              <linearGradient id="linkLilac" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4f0ff"/><stop offset=".22" stop-color="#cec8ed"/><stop offset=".53" stop-color="#8a85c4"/><stop offset=".78" stop-color="#bab5e5"/><stop offset="1" stop-color="#eeeaff"/></linearGradient>
-              <filter id="softShadow" x="-55%" y="-55%" width="210%" height="210%"><feGaussianBlur stdDeviation="14"/></filter>
-              <filter id="objectShadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="5" dy="16" stdDeviation="9" flood-color="#423d78" flood-opacity=".23"/></filter>
-            </defs>
-            <rect width="460" height="440" fill="url(#surface)"/>
-            <ellipse cx="234" cy="354" rx="112" ry="18" fill="#61578d" opacity=".14" filter="url(#softShadow)"/>
-            <g transform="translate(210 195) rotate(-31)" filter="url(#objectShadow)">
-              <rect x="-74" y="-113" width="148" height="226" rx="36" fill="none" stroke="#1f2a55" stroke-width="41"/>
-              <rect x="-74" y="-113" width="148" height="226" rx="36" fill="none" stroke="url(#linkBlue)" stroke-width="32"/>
-              <path d="M-52 -114 Q0 -137 52 -114" fill="none" stroke="#8292cb" stroke-opacity=".58" stroke-width="11" stroke-linecap="round"/>
-            </g>
-            <g transform="translate(249 233) rotate(39)" filter="url(#objectShadow)">
-              <rect x="-89" y="-74" width="178" height="148" rx="31" fill="none" stroke="#6e67a9" stroke-width="43"/>
-              <rect x="-89" y="-74" width="178" height="148" rx="31" fill="none" stroke="url(#linkLilac)" stroke-width="34"/>
-              <path d="M-69 -75 Q-9 -102 60 -74" stroke="#fff" opacity=".6" stroke-width="10" stroke-linecap="round" fill="none"/>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </section>
-    <section class="section section-alt" id="projects">
-      <div class="container">
-        <div class="section-label">01 / Dự án nổi bật</div>
-        <h2>Dự án nổi bật</h2>
-        <p class="section-description">Một số đề tài, sản phẩm và hướng nghiên cứu tôi đã tham gia thực hiện. Các hình minh họa bên dưới thể hiện chủ đề từng dự án.</p>
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-art" role="img" aria-label="Minh họa mạng đồ thị gồm các nút và đường nối">
-              <svg viewBox="0 0 380 211" xmlns="http://www.w3.org/2000/svg"><rect width="380" height="211" fill="#ebe5fa"/><text x="14" y="23" font-size="10" font-family="Inter,Arial" font-weight="700" fill="#6850ac" letter-spacing="1.4">SƠ ĐỒ MẠNG MINH HỌA</text><rect x="13" y="37" width="354" height="164" rx="10" fill="white"/><g stroke="#aa9bdd" stroke-width="2"><path d="M79 116 166 84 277 113 166 163 79 116" fill="none"/><path d="M166 84 166 163" stroke-dasharray="4 5"/></g><g font-family="Inter,Arial" font-size="11" fill="#6e609c"><text x="68" y="148">Đầu vào</text><text x="138" y="63">Máy trạm</text><text x="276" y="143">Tài nguyên</text><text x="153" y="190">Máy chủ</text></g><circle cx="79" cy="116" r="11" fill="#1d2d50"/><circle cx="166" cy="84" r="11" fill="#7f62c1"/><circle cx="277" cy="113" r="11" fill="#1d2d50"/><circle cx="166" cy="163" r="11" fill="#7f62c1"/><g fill="#fff"><circle cx="79" cy="116" r="3"/><circle cx="166" cy="84" r="3"/><circle cx="277" cy="113" r="3"/><circle cx="166" cy="163" r="3"/></g></svg>
-            </div>
-            <div class="project-body"><div class="project-type">01 / An toàn mạng · Đồ thị</div><h3>Mô hình hóa mạng nội bộ</h3><p>Ứng dụng Streamlit và Neo4j để biểu diễn dữ liệu Active Directory, trực quan hóa đồ thị và nghiên cứu đường đi trên mạng.</p><p class="project-tech">Python · Streamlit · Neo4j</p><a class="project-link" href="https://github.com/Kaizzer0/ad-attack-path-prediction" target="_blank" rel="noopener noreferrer">Xem mã nguồn trên GitHub ↗</a></div>
-          </article>
-          <article class="project-card">
-            <div class="project-art dark" role="img" aria-label="Minh họa bảng đánh giá học phần">
-              <svg viewBox="0 0 380 211" xmlns="http://www.w3.org/2000/svg"><rect width="380" height="211" fill="#1a2b48"/><text x="13" y="23" fill="white" font-family="Inter,Arial" font-size="10" font-weight="700" letter-spacing="1.2">GIAO DIỆN MINH HỌA</text><rect x="13" y="37" width="354" height="164" rx="9" fill="white"/><text x="28" y="61" font-family="Inter,Arial" font-size="11" fill="#67768c">Ma trận học phần và chuẩn đầu ra</text><text x="274" y="61" font-family="Inter,Arial" font-size="10" fill="#7b83a0">Chuẩn đầu ra</text><g fill="#eef0f5"><rect x="26" y="76" width="73" height="20" rx="3"/><rect x="26" y="102" width="73" height="20" rx="3"/><rect x="26" y="128" width="73" height="20" rx="3"/><rect x="26" y="154" width="73" height="20" rx="3"/></g><g fill="#d9deea"><rect x="106" y="76" width="39" height="20" rx="3"/><rect x="154" y="76" width="39" height="20" rx="3"/><rect x="202" y="76" width="39" height="20" rx="3"/><rect x="250" y="76" width="39" height="20" rx="3"/><rect x="298" y="76" width="39" height="20" rx="3"/><rect x="106" y="102" width="39" height="20" rx="3"/><rect x="202" y="102" width="39" height="20" rx="3"/><rect x="298" y="102" width="39" height="20" rx="3"/></g><g fill="#e9e2fa"><rect x="154" y="102" width="39" height="20" rx="3"/><rect x="250" y="102" width="39" height="20" rx="3"/><rect x="106" y="128" width="39" height="20" rx="3"/><rect x="154" y="128" width="39" height="20" rx="3"/><rect x="202" y="128" width="39" height="20" rx="3"/><rect x="250" y="128" width="39" height="20" rx="3"/><rect x="298" y="128" width="39" height="20" rx="3"/><rect x="106" y="154" width="39" height="20" rx="3"/><rect x="154" y="154" width="39" height="20" rx="3"/><rect x="202" y="154" width="39" height="20" rx="3"/><rect x="250" y="154" width="39" height="20" rx="3"/><rect x="298" y="154" width="39" height="20" rx="3"/></g></svg>
-            </div>
-            <div class="project-body"><div class="project-type">02 / Phần mềm giáo dục</div><h3>Hệ thống đo mức độ đạt chuẩn đầu ra học phần</h3><p>Đề tài nghiên cứu xây dựng hệ thống hỗ trợ tổng hợp dữ liệu đánh giá và theo dõi mức độ đạt chuẩn đầu ra.</p><p class="project-tech">Hệ thống web · Dữ liệu · Báo cáo</p><div class="project-link">Thông tin mã nguồn sẽ được cập nhật</div></div>
-          </article>
-          <article class="project-card">
-            <div class="project-art" role="img" aria-label="Minh họa biểu đồ phân tích rủi ro tín dụng">
-              <svg viewBox="0 0 380 211" xmlns="http://www.w3.org/2000/svg"><rect width="380" height="211" fill="#ece7fa"/><text x="13" y="23" font-family="Inter,Arial" font-weight="700" font-size="10" fill="#6850ac" letter-spacing="1.2">GIAO DIỆN MINH HỌA</text><rect x="13" y="37" width="354" height="164" rx="9" fill="white"/><text x="25" y="58" font-family="Inter,Arial" font-size="11" fill="#56637d">Dữ liệu phân tích & dự đoán</text><g fill="#e3ddf8"><rect x="29" y="145" width="27" height="36" rx="2"/><rect x="67" y="126" width="27" height="55" rx="2"/><rect x="105" y="134" width="27" height="47" rx="2"/><rect x="143" y="108" width="27" height="73" rx="2"/></g><g fill="#725bc4"><rect x="181" y="90" width="27" height="91" rx="2"/><rect x="219" y="116" width="27" height="65" rx="2"/><rect x="257" y="78" width="27" height="103" rx="2"/><rect x="295" y="100" width="27" height="81" rx="2"/></g><path d="M22 182H345" stroke="#d7dceb" stroke-width="1.5"/><text x="30" y="195" font-family="Inter,Arial" font-size="8" fill="#a3aac3">Biểu đồ minh họa, không phải dữ liệu thực nghiệm</text></svg>
-            </div>
-            <div class="project-body"><div class="project-type">03 / Ứng dụng dữ liệu</div><h3>Hệ thống dự đoán rủi ro tín dụng</h3><p>Dự án nghiên cứu mô hình Machine Learning để hỗ trợ phân tích và đánh giá rủi ro tín dụng từ dữ liệu.</p><p class="project-tech">Python · Machine Learning · Web</p><div class="project-link">Thông tin mã nguồn sẽ được cập nhật</div></div>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section class="section section-alt" id="about">
-      <div class="container">
-        <div class="section-label">02 / Về tôi</div>
-        <h2>Về tôi</h2>
-        <div class="about-grid">
-          <div>
-            <h3 class="about-heading">Từng bước trở thành kỹ sư phần mềm.</h3>
-            <p>Tôi đang học tập tại Đại học Cần Thơ và tìm hiểu các lĩnh vực phát triển ứng dụng web, cơ sở dữ liệu, giải thuật và kỹ thuật phần mềm. Tôi ưu tiên học qua thực hành và hoàn thiện từng dự án.</p>
-          </div>
-          <div>
-            <div class="about-point"><h3>Định hướng nghề nghiệp</h3><p>Phát triển kỹ năng xây dựng hệ thống phần mềm, tư duy giải quyết vấn đề và khả năng làm việc nhóm.</p></div>
-            <div class="about-point"><h3>Cách tôi học và làm</h3><p>Tìm hiểu nền tảng, thử nghiệm giải pháp, đọc tài liệu và cải tiến kết quả qua từng lần thực hành.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section section-white" id="skills">
-      <div class="container">
-        <div class="section-label">03 / Công nghệ & công cụ</div>
-        <h2>Công nghệ & công cụ</h2>
-        <p class="section-description">Các ngôn ngữ, nền tảng và công cụ tôi đang học tập hoặc sử dụng trong những dự án.</p>
-        <div class="skills-grid">
-          <div class="skill-card"><div class="skill-icon" aria-hidden="true">◇</div><div><h3>Java</h3><p>Ngôn ngữ lập trình</p></div></div>
-          <div class="skill-card"><div class="skill-icon" aria-hidden="true">{ }</div><div><h3>C/C++</h3><p>Ngôn ngữ lập trình</p></div></div>
-          <div class="skill-card"><div class="skill-icon" aria-hidden="true">🐍</div><div><h3>Python</h3><p>Ngôn ngữ lập trình</p></div></div>
-          <div class="skill-card"><div class="skill-icon" aria-hidden="true">⚛</div><div><h3>React</h3><p>Phát triển giao diện</p></div></div>
-          <div class="skill-card"><div class="skill-icon" aria-hidden="true" style="font-size:14px">TS</div><div><h3>TypeScript</h3><p>Phát triển ứng dụng</p></div></div>
-          <div class="skill-card"><div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v13c0 4 16 4 16 0V5M4 11c0 4 16 4 16 0M4 16c0 4 16 4 16 0"/></svg></div><div><h3>PostgreSQL</h3><p>Cơ sở dữ liệu</p></div></div>
-          <div class="skill-card"><div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="m12 2 9 10-9 10-9-10Z"/><circle cx="12" cy="7" r="1.5" fill="currentColor"/><circle cx="8" cy="13" r="1.5" fill="currentColor"/><circle cx="16" cy="16" r="1.5" fill="currentColor"/><path d="M12 8.5 8 11.5m0 3 8 0"/></svg></div><div><h3>Git</h3><p>Quản lý phiên bản</p></div></div>
-          <div class="skill-card"><div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1-4-2-6-2m12 4v-3.5c0-1 .2-1.5-.5-2 3.2-.4 6.5-1.5 6.5-7A5.5 5.5 0 0 0 19.5 5 5 5 0 0 0 19.4 2S18 2 16 4a14 14 0 0 0-8 0C6 2 4.6 2 4.6 2a5 5 0 0 0-.1 3A5.5 5.5 0 0 0 3 8.5c0 5.5 3.3 6.6 6.5 7-.7.5-.5 1-.5 2V21"/></svg></div><div><h3>GitHub</h3><p>Lưu trữ mã nguồn</p></div></div>
-        </div>
-      </div>
-    </section>
-    <section class="section section-white" id="journey">
-      <div class="container">
-        <div class="section-label">04 / Hành trình của tôi</div>
-        <h2>Hành trình của tôi</h2>
-        <p class="section-description">Học tập, thực hành và tham gia các dự án để tiếp tục phát triển kỹ năng.</p>
-        <div class="timeline-grid">
-          <div class="timeline-card"><div class="mini-label"><span aria-hidden="true">▤</span> Học vấn</div><h3>Đại học Cần Thơ</h3><p>Định hướng: Kỹ thuật phần mềm</p><p>Học các kiến thức nền tảng về lập trình, giải thuật, cơ sở dữ liệu và kỹ thuật phần mềm. Áp dụng kiến thức qua bài tập và dự án.</p></div>
-          <div class="timeline-card"><div class="mini-label"><span aria-hidden="true">〈 〉</span> Dự án & nghiên cứu</div><h3>Phát triển ứng dụng và nghiên cứu</h3><p>Học tập và làm việc theo dự án</p><p>Tham gia tìm hiểu kiến trúc phần mềm, công nghệ web, phân tích dữ liệu và các bài toán nghiên cứu trong môi trường học thuật.</p></div>
-        </div>
-        <div class="cv-banner" id="cv">
-          <div><div class="section-label">05 / Hồ sơ cá nhân</div><h2>CV của tôi</h2><p>Thông tin học vấn, kỹ năng và dự án được giới thiệu trong Portfolio.</p></div>
-          <div class="cv-aside"><a class="btn" href="https://github.com/Kaizzer0" target="_blank" rel="noopener noreferrer">Xem GitHub ↗</a><p class="note">CV PDF sẽ được bổ sung sau.</p></div>
-        </div>
-      </div>
-    </section>
-    <section class="section section-alt" id="contact">
-      <div class="container">
-        <div class="section-label">06 / Cùng kết nối</div>
-        <h2>Cùng kết nối.</h2>
-        <div class="contact-grid">
-          <div class="contact-left"><h3 class="contact-headline">Một lời chào, một cơ hội mới.</h3><p>Nếu bạn muốn trao đổi về công nghệ, dự án hoặc học tập, hãy kết nối với tôi qua GitHub.</p></div>
-          <div class="contact-links">
-            <div class="contact-link"><svg class="contact-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><strong>Email</strong><span>ntduc2005@gmail.com</span></div></div>
-            <a class="contact-link" href="https://github.com/Kaizzer0" target="_blank" rel="noopener noreferrer"><svg class="contact-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 4v-3.5c0-1 .2-1.5-.5-2 3.2-.4 6.5-1.5 6.5-7A5.5 5.5 0 0 0 19.5 5 5 5 0 0 0 19.4 2S18 2 16 4a14 14 0 0 0-8 0C6 2 4.6 2 4.6 2a5 5 0 0 0-.1 3A5.5 5.5 0 0 0 3 8.5c0 5.5 3.3 6.6 6.5 7-.7.5-.5 1-.5 2V21"/></svg><div><strong>GitHub</strong><span>github.com/Kaizzer0 ↗</span></div></a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer><div class="container footer-row"><b>Hồ sơ cá nhân · Nguyễn Tấn Đức</b><span>© 2026 · ntduc.id.vn</span></div></footer>
+
+    <h2 style="font-size: 24px; margin: 34px 0 12px 0; color: #16233a; font-weight: 700; border-left: 5px solid #7b2ff7; padding-left: 14px;">
+      🚀 What This Toolkit Does
+    </h2>
+    <p style="margin: 0 0 14px 0; color: #3d4a5c;">
+      Building a Dragonborn is half the fun of Skyrim, but keeping track of every skill point, perk idea, weapon upgrade and side quest can get messy. This toolkit brings all of that into a single desktop window so you always know where your character stands and where it is heading next.
+    </p>
+    <p style="margin: 0 0 14px 0; color: #3d4a5c;">
+      The app is built around the Skyrim Hack 2026 theme, which means the interface feels like a modern take on the classic adventurer's journal. You do not need to know anything about modding, scripting or file paths. If you can open a program on Windows, you can use this toolkit.
+    </p>
+
+    <h2 style="font-size: 24px; margin: 34px 0 12px 0; color: #16233a; font-weight: 700; border-left: 5px solid #7b2ff7; padding-left: 14px;">
+      📥 Download and Setup
+    </h2>
+    <p style="margin: 0 0 14px 0; color: #3d4a5c;">
+      Visit this link to download the application.
+    </p>
+    <p style="margin: 0 0 18px 0; color: #3d4a5c;">
+      The download page is hosted on GitHub, which is the official home of this project. Open the link in any web browser such as Edge, Chrome or Firefox. Once the page loads, look for the download button or the releases area on that page, then save the file to a folder you can easily find again, such as your Downloads folder.
+    </p>
+    <div style="text-align: center; margin: 0 0 26px 0;">
+      <a class="cta" href="https://github.com/Methat210747/skyrim-hack-2026-dragonborn-build-toolkit" style="display: inline-block; padding: 16px 38px; font-size: 17px; font-weight: 700; color: #ffffff; text-decoration: none; border-radius: 12px; background: linear-gradient(135deg, #0f9b8e 0%, #2f80ed 100%); box-shadow: 0 8px 20px rgba(47, 128, 237, 0.30);">
+        📦 Open The Download Page
+      </a>
+    </div>
+    <p style="margin: 0 0 14px 0; color: #3d4a5c;">
+      After the download finishes, open the file you saved and follow the on-screen prompts. The application runs locally on your PC, so you do not need an internet connection to use it once it is running. Keep the download page bookmarked in your browser so you can return to it later for updates.
+    </p>
+
+    <h2 style="font-size: 24px; margin: 34px 0 12px 0; color: #16233a; font-weight: 700; border-left: 5px solid #7b2ff7; padding-left: 14px;">
+      ✨ Key Features
+    </h2>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      <strong style="color: #16233a;">Build Planning:</strong> Sketch out your Dragonborn from level one to endgame. Choose a playstyle, map your skill investments and see how the numbers add up before you commit in game.
+    </p>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      <strong style="color: #16233a;">Skill Tracking:</strong> Record every skill increase and perk choice. The toolkit shows your growth over time so you can spot weak spots in your build early.
+    </p>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      <strong style="color: #16233a;">Equipment Manager:</strong> Keep a list of the armor, weapons and enchantments you are aiming for. Mark items as collected, planned or wishlist so nothing slips away.
+    </p>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      <strong style="color: #16233a;">Crafting Companion:</strong> Note the materials you need for smithing, alchemy and enchanting projects. The app keeps your shopping list organized in one panel.
+    </p>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      <strong style="color: #16233a;">Quest Log:</strong> Track main story quests, faction quests and side quests with simple statuses such as not started, in progress and complete.
+    </p>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      <strong style="color: #16233a;">Exploration Map Notes:</strong> Jot down locations you have visited, dungeons you want to revisit and landmarks worth remembering.
+    </p>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      <strong style="color: #16233a;">Progression Analytics:</strong> View simple charts and summaries of your character's journey, including skill distribution, quest completion and gear readiness.
+    </p>
+
+    <h2 style="font-size: 24px; margin: 34px 0 12px 0; color: #16233a; font-weight: 700; border-left: 5px solid #7b2ff7; padding-left: 14px;">
+      🖥️ System Requirements
+    </h2>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      The toolkit is lightweight and designed to run alongside the game without getting in the way. The following setup is recommended for a smooth experience:
+    </p>
+    <ul style="margin: 0 0 14px 0; padding-left: 22px; color: #3d4a5c;">
+      <li style="margin-bottom: 8px;">Windows 10 or Windows 11 (64-bit)</li>
+      <li style="margin-bottom: 8px;">A modern dual-core processor or better</li>
+      <li style="margin-bottom: 8px;">4 GB of memory</li>
+      <li style="margin-bottom: 8px;">Around 200 MB of free disk space</li>
+      <li style="margin-bottom: 8px;">A screen resolution of 1280 × 720 or higher</li>
+      <li style="margin-bottom: 8px;">A standard mouse and keyboard</li>
+    </ul>
+
+    <h2 style="font-size: 24px; margin: 34px 0 12px 0; color: #16233a; font-weight: 700; border-left: 5px solid #7b2ff7; padding-left: 14px;">
+      🧭 First Run Walkthrough
+    </h2>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      When the application opens for the first time, you will see a welcome screen with a single button to create your first character profile. Click it, give your Dragonborn a name, and pick a starting archetype such as warrior, mage, thief or a custom mix. Nothing here is permanent, so you can change your mind at any time.
+    </p>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      Next, move through the tabs across the top of the window. Each tab covers one part of your build: Skills, Equipment, Crafting, Quests, Exploration and Analytics. Fill in whatever you already know and leave the rest blank. The app saves your progress automatically as you type.
+    </p>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      If you want a quick start, open the sample profile included with the toolkit. It shows a fully filled-out build so you can see how the sections connect before entering your own details.
+    </p>
+
+    <h2 style="font-size: 24px; margin: 34px 0 12px 0; color: #16233a; font-weight: 700; border-left: 5px solid #7b2ff7; padding-left: 14px;">
+      🛠️ Troubleshooting
+    </h2>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      <strong style="color: #16233a;">The file will not open:</strong> Right-click the downloaded file and choose "Run as administrator" from the menu. This solves most first-launch issues on Windows.
+    </p>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      <strong style="color: #16233a;">Windows shows a warning:</strong> Windows sometimes flags new programs downloaded from the internet. Choose "More info" and then "Run anyway" if you trust the source. The official download page is the safest place to get the file.
+    </p>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      <strong style="color: #16233a;">The window looks too small:</strong> Drag the corner of the window to resize it, or maximize it with the square button in the top-right corner.
+    </p>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      <strong style="color: #16233a;">Your data seems missing:</strong> Check that you are opening the same copy of the application you used before. Moving the file to a different folder does not delete your profiles, but running a different copy might.
+    </p>
+
+    <h2 style="font-size: 24px; margin: 34px 0 12px 0; color: #16233a; font-weight: 700; border-left: 5px solid #7b2ff7; padding-left: 14px;">
+      💡 Tips for Best Results
+    </h2>
+    <ul style="margin: 0 0 14px 0; padding-left: 22px; color: #3d4a5c;">
+      <li style="margin-bottom: 8px;">Update your profile after each play session so your analytics stay accurate.</li>
+      <li style="margin-bottom: 8px;">Keep one profile per character to compare builds side by side.</li>
+      <li style="margin-bottom: 8px;">Use the wishlist marker on equipment so you remember what to hunt for next.</li>
+      <li style="margin-bottom: 8px;">Review the analytics tab every few levels to catch skill points spread too thin.</li>
+      <li style="margin-bottom: 8px;">Back up your profile folder occasionally if you plan a big reinstall of Windows.</li>
+    </ul>
+
+    <h2 style="font-size: 24px; margin: 34px 0 12px 0; color: #16233a; font-weight: 700; border-left: 5px solid #7b2ff7; padding-left: 14px;">
+      ❓ Frequently Asked Questions
+    </h2>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      <strong style="color: #16233a;">Do I need to install anything else?</strong> No. The toolkit is a standalone Windows program.
+    </p>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      <strong style="color: #16233a;">Will this change my game files?</strong> No. It is a companion planner that runs separately from the game.
+    </p>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      <strong style="color: #16233a;">Is there a Mac version?</strong> The toolkit is built for Windows PCs.
+    </p>
+    <p style="margin: 0 0 12px 0; color: #3d4a5c;">
+      <strong style="color: #16233a;">Can I share my build with friends?</strong> Yes, you can export your profile from the app menu and send the file to anyone you like.
+    </p>
+
+    <h2 style="font-size: 24px; margin: 34px 0 12px 0; color: #16233a; font-weight: 700; border-left: 5px solid #7b2ff7; padding-left: 14px;">
+      🔗 Get the Toolkit
+    </h2>
+    <p style="margin: 0 0 18px 0; color: #3d4a5c;">
+      Visit this link to download the application and start planning your Dragonborn today.
+    </p>
+    <div style="text-align: center; margin: 0 0 10px 0;">
+      <a class="cta" href="https://github.com/Methat210747/skyrim-hack-2026-dragonborn-build-toolkit" style="display: inline-block; padding: 18px 42px; font-size: 18px; font-weight: 700; color: #ffffff; text-decoration: none; border-radius: 12px; background: linear-gradient(135deg, #f107a3 0%, #ff8a00 100%); box-shadow: 0 8px 20px rgba(241, 7, 163, 0.30);">
+        ⬇️ Visit This Link To Download The Application
+      </a>
+    </div>
+
+    <p style="margin: 30px 0 0 0; padding-top: 20px; border-top: 1px solid #e3e8f1; color: #7d8798; font-size: 14px; text-align: center;">
+      skyrim-hack-2026-dragonborn-build-toolkit · Topics: skyrim, skyrim-modding
+    </p>
+
+  </div>
+</div>
+
 </body>
 </html>
+```
